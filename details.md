@@ -50,6 +50,47 @@
                 - フォントサイズ: 24px (--menu-item-text-size)
 
 - 目次
-    - 幅: body
+    - 幅: 親要素の50%
     - 幅の最小: 180px
     - 幅の最大: 300px
+    - 高さ: 不定
+    - 上下の内側の余白: 5px (--toc-vertical-padding)
+    - テキスト｢目次｣とリストの間は10pxの余白 (--toc-gap-title-list)
+    - テキスト｢目次｣
+        - 幅: 親要素(目次)の100%
+        - 高さ: 内部テキストに合わせる
+        - フォントサイズ: 16px (--toc-title-text-size)
+        - テキストの位置: 左右中央寄せ
+    - リスト
+        - 
+
+- セクション
+    - 普通のセクション
+        - 幅: 親要素の100%
+        - 高さ: 不定
+        - 左右の余白: 16px (--section-horizontal-padding)
+        - 見出しとコンテンツの間の余白: 16px (--section-gap-item)
+        - 見出し
+            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 高さ: テキストに合わせる
+            - フォントサイズ: 24px (--section-title-text-size)
+            - テキストは左右中央寄せ
+        - コンテンツ
+            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 高さ: 不定
+            - 左内側の余白: 16px (--section-content-marginleft)
+            - 内部テキスト
+                - 幅: 親要素の余白分を除いてできるだけ大きく
+                - フォントサイズ: 16px (--section-content-text-size)
+    - コンテンツカード
+        - 幅: 親要素の余白分を除いてできるだけ大きく
+        - 高さ: 不定
+        - 上下内側の余白: 4px (--card-vertical-padding)
+        - 左右内側の余白: 16px (--card-horizontal-padding)
+        - 更新日、見出し、コンテンツの間の余白: 8px (--card-gap-item)
+        - 更新日
+            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 高さ: 内部テキストに合わせる
+            - フォントサイズ: 24px (--card-title-text-size)
+
+
