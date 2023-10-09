@@ -1,12 +1,19 @@
+- 全体
+    - フォントファミリー: "Open Sans", sasns-serif
+
 - ヘッダー
-    - 幅: body要素の100%
+    - 幅: 親要素の100%
     - 高さ: 48px (--top-header-height)
+    - 背景色: #505050 (--top-header-bgc)
     - 画面上部に｢position: sticky;｣で固定
     - サイト名「群馬高専　電算部」
         - 幅: 内部テキストに合わせる
         - 高さ: 内部テキストに合わせる
-        - フォントサイズ: 24px (--top-header-title-size)
-        - 外側左に16px (--top-header-title-marginleft)の余白、右にはあるだけ余白をとる (margin-right: auto;)
+        - フォントサイズ: 24px (--top-header-title-text-size)
+        - フォントウェイト: 200 (--top-header-title-text-weight)
+        - 文字色: #fff (--top-header-text-color)
+        - 左外側の余白: 16px (--top-header-title-marginleft)
+        - 右外側の余白: あるだけ余白をとる (margin-right: auto;)
         - 上下中央寄せ
     - 操作ボタン群
         - 幅: 内容物に合わせる
@@ -14,24 +21,29 @@
         - 右端寄せ、外側上下左右の余白はなし
         - 目次ボタンとメニューボタンの間は余白なし
         - 目次ボタン
+            - 幅: 64px
             - 高さ: 親要素(ヘッダー)の100%
-            - テキスト｢目次｣とその右に矢印画像
+            - テキスト｢目次｣とその右に矢印
             - テキスト｢目次｣
-                - フォントサイズ: 16px (--toc-text-size)
-            - 矢印画像
-                - 画像サイズ比: 1/1
-                - 高さ: テキスト｢目次｣と同じ
+                - フォントサイズ: 16px (--top-header-tocbutton-text-size)
+                - 文字色: #fff (--top-header-text-color)
+            - 矢印
+                - 以下リンクの矢印ボタンを大きさ、色を変えて使用
+                - [CSSで作る開閉で向きが変わる矢印付きアコーディオン（レスポンシブ対応）](https://palette33.jp/archives/3115)
+                - widthとheight: 0.5 * --top-header-tocbutton-text-size (--top-header-tocbutton-arrow-size)
+                - 色: #fff (--top-header-text-color)
         - メニューボタン
             - 以下リンクの1つ目のハンバーガーメニューボタンを採用
             - [クリックでオシャレなアニメーション（詰め合わせ①）- 【jQueryで簡単】超オシャレなハンバーガーメニューのサンプル31選](https://photopizza.design/hamburger_menu_technique/#:~:text=%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E3%82%AA%E3%82%B7%E3%83%A3%E3%83%AC%E3%81%AA%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88%E8%A9%B0%E3%82%81%E5%90%88%E3%82%8F%E3%81%9B%E2%91%A0%EF%BC%89)
             - ただし、真ん中2本目の線をテキスト｢menu｣に変更
                 - テキスト｢menu｣
-                    - フォントサイズ: 16px (--menu-button-text-size)
+                    - フォントサイズ: 16px (--top-header-menubutton-text-size)
                     - 上下中央寄せ
 
 - メニュー
     - 幅: body要素の100%
     - 高さ: 100dvh - var(--top-header-height)
+    - 背景色: rgba(255,255,255,0.8) (--menu-bgc)
     - 画面下部に固定
     - リスト
         - 幅: 内容物に合わせる
@@ -45,6 +57,7 @@
             - テキスト
                 - 幅: テキストに合わせる
                 - 高さ: テキストに合わせる
+                - 文字色: #fff (--menu-item-text-color)
                 - テキストの位置: 上下左右中央寄せ
                 - 上下の余白: 親要素(各要素)の幅の12.5%
                 - フォントサイズ: 24px (--menu-item-text-size)
@@ -59,10 +72,23 @@
     - テキスト｢目次｣
         - 幅: 親要素(目次)の100%
         - 高さ: 内部テキストに合わせる
+        - 文字色: #fff (--toc-text-color)
         - フォントサイズ: 16px (--toc-title-text-size)
         - テキストの位置: 左右中央寄せ
     - リスト
-        - 
+        - 幅: 親要素の100%
+        - 高さ: 内容物に合わせる
+        - 上下内側の余白: 5px (--toc-list-vertical-padding)
+        - 左右内側の余白: 10px (--toc-list-horizontal-padding)
+        - 各リストアイテムの余白: 5px (--toc-list-gap)
+        - 各リストアイテム
+            - 幅: 不定
+            - 高さ: 30px (--toc-list-item-height)
+            - 内部テキストの位置: 上下中央寄せ
+            - 左端にリストのマーカーを使用
+            - 内部テキスト
+                - フォントサイズ: 14px
+                - 文字色: #fff (--toc-text-color)
 
 - セクション
     - 普通のセクション
@@ -71,38 +97,44 @@
         - 左右の余白: 16px (--section-horizontal-padding)
         - 見出しとコンテンツの間の余白: 16px (--section-gap-item)
         - 見出し
-            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 幅: 親要素の100%
             - 高さ: テキストに合わせる
             - フォントサイズ: 24px (--section-title-text-size)
+            - 文字色: #fff (--section-text-color)
             - テキストは左右中央寄せ
         - コンテンツ
-            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 幅: 親要素の100%
             - 高さ: 不定
             - 左内側の余白: 16px (--section-content-marginleft)
             - 内部テキスト
-                - 幅: 親要素の余白分を除いてできるだけ大きく
+                - 幅: 親要素の100%
                 - フォントサイズ: 16px (--section-content-text-size)
+                - 文字色: #fff (--section-text-color)
     - コンテンツカード
-        - 幅: 親要素の余白分を除いてできるだけ大きく
+        - 幅: 親要素の100%
         - 高さ: 不定
+        - 円の角の半径: 12px (--card-border-radius)
         - 上下内側の余白: 4px (--card-vertical-padding)
         - 左右内側の余白: 16px (--card-horizontal-padding)
-        - 更新日、見出し、コンテンツの間の余白: 8px (--card-gap-item)
+        - 更新日、見出し、コンテンツの間の余白: 8px (--card-gap-ele)
         - 更新日
-            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 幅: 親要素の100%
             - 高さ: 内部テキストに合わせる
             - フォントサイズ: 16px (--card-date-text-size)
+            - 文字色: #fff (--card-text-color)
             - テキストは左右中央寄せ
         - 見出し
-            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 幅: 親要素の100%
             - 高さ: 内部テキストに合わせる
             - フォントサイズ 24px (--card-title-text-size)
+            - 文字色: #fff (--card-text-color)
         - コンテンツ
-            - 幅: 親要素の余白分を除いてできるだけ大きく
+            - 幅: 親要素の100%
             - 高さ: 不定
             - 左内側の余白: 16px (--card-content-marginleft)
             - 内部テキスト
-                - 幅: 親要素の余白分を除いてできるだけ大きく
+                - 幅: 親要素の100%
                 - フォントサイズ: 16px (--card-content-text-size)
+                - 文字色: #fff (--card-text-color)
 
 
