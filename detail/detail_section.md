@@ -1,0 +1,19 @@
+- 普通のセクション
+    - 幅: 親要素の100%
+    - 高さ: 不定
+    - 左右の余白: 16px (--section-horizontal-padding)
+    - 見出しとコンテンツの間の余白: 16px (--section-gap-item)
+    - 見出し
+        - 幅: 親要素の100%
+        - 高さ: テキストに合わせる
+        - フォントサイズ: 24px (--section-title-text-size)
+        - 文字色: #fff (--section-text-color)
+        - テキストは左右中央寄せ
+    - コンテンツ
+        - 幅: 親要素の100%
+        - 高さ: 不定
+        - 左内側の余白: 16px (--section-content-marginleft)
+        - 内部テキスト
+            - 幅: 親要素の100%
+            - フォントサイズ: 16px (--section-content-text-size)
+            - 文字色: #fff (--section-text-color)

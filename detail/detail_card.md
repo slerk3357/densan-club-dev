@@ -1,0 +1,26 @@
+- コンテンツカード
+    - 幅: 親要素の100%
+    - 高さ: 不定
+    - 円の角の半径: 12px (--card-border-radius)
+    - 上下内側の余白: 4px (--card-vertical-padding)
+    - 左右内側の余白: 16px (--card-horizontal-padding)
+    - 更新日、見出し、コンテンツの間の余白: 8px (--card-gap-ele)
+    - 更新日
+        - 幅: 親要素の100%
+        - 高さ: 内部テキストに合わせる
+        - フォントサイズ: 16px (--card-date-text-size)
+        - 文字色: #fff (--card-text-color)
+        - テキストは左右中央寄せ
+    - 見出し
+        - 幅: 親要素の100%
+        - 高さ: 内部テキストに合わせる
+        - フォントサイズ 24px (--card-title-text-size)
+        - 文字色: #fff (--card-text-color)
+    - コンテンツ
+        - 幅: 親要素の100%
+        - 高さ: 不定
+        - 左内側の余白: 16px (--card-content-marginleft)
+        - 内部テキスト
+            - 幅: 親要素の100%
+            - フォントサイズ: 16px (--card-content-text-size)
+            - 文字色: #fff (--card-text-color)
