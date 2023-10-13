@@ -1,2 +1,2 @@
 - 全体
-    - フォントファミリー: "Open Sans", sasns-serif
+    - フォントファミリー: "Open Sans", sans-serif
